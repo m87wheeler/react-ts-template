@@ -8,9 +8,13 @@ const config = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "index.bundle.js",
+    clean: true,
   },
+  stats: "minimal",
   devServer: {
     port: 3001,
+    historyApiFallback: true,
+    hot: true,
     static: {
       directory: path.join(__dirname, "src"),
     },
